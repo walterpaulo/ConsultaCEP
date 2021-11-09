@@ -10,17 +10,17 @@ public class CEPService_test {
 
     @Test
     public void isCEP_TEST(){
-    String cep = "01311-000";
-    CEPService cepService = new CEPService(cep);
-    final Boolean obtido = cepService.iscep();
-    final Boolean achei = true;
+        CEPModel cepModel = new CEPModel("01311-000");
+        CEPService cepService = new CEPService(cepModel);
+        final Boolean obtido = cepService.iscep();
+        final Boolean achei = true;
         Assert.assertEquals(achei,obtido);
     }
 
     @Test
     public void getCEP_Test(){
-        String cep = "01311-000";
-        CEPService cepService = new CEPService(cep);
-        final List<CEPModel> obtido = cepService.getCEP();
+        CEPModel cepModel = new CEPModel("01311-000");
+        CEPService cepService = new CEPService(cepModel);
+        final CEPService obtido = cepService.getCEP();
     }
 }
