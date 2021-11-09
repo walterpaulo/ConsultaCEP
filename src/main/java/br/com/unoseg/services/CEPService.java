@@ -15,6 +15,6 @@ public class CEPService {
     }
 
     public Boolean iscep() {
-        return getCEP().matches("[0-9]{5}-[0-9]3");
+        return getCEP().matches("[0-9]{5}-[0-9]{3}");
     }
 }
