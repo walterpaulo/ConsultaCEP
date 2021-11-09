@@ -1,5 +1,6 @@
 package br.com.unoseg.services;
 
+import br.com.unoseg.config.APICEP;
 import br.com.unoseg.models.CEPModel;
 
 import java.util.Optional;
@@ -23,10 +24,11 @@ public class CEPService {
         return cepModel.getCEP().matches("[0-9]{5}-[0-9]{3}");
     }
 
-    public CEPService getCEP() {
-        Optional<CEPModel> obj;
+    public CEPModel getCEP() {
+        Optional<CEPModel> obj = null;
+        APICEP apicep = new APICEP(cepModel.getCEP());
         if (iscep()){
-
+            return apicep.getvalor();
         }
         return null;
     }

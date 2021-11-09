@@ -21,6 +21,7 @@ public class CEPService_test {
     public void getCEP_Test(){
         CEPModel cepModel = new CEPModel("01311-000");
         CEPService cepService = new CEPService(cepModel);
-        final CEPService obtido = cepService.getCEP();
+        final CEPModel obtido = cepService.getCEP();
+        Assert.assertEquals(obtido.getUf(), "SP");
     }
 }
