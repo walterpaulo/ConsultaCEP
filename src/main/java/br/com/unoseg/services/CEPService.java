@@ -25,7 +25,6 @@ public class CEPService {
     }
 
     public CEPModel getCEP() {
-        Optional<CEPModel> obj = null;
         APICEP apicep = new APICEP(cepModel.getCEP());
         if (iscep()){
             return apicep.getvalor();

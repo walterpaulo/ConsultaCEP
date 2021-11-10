@@ -19,9 +19,19 @@ public class CEPService_test {
 
     @Test
     public void getCEP_Test(){
-        CEPModel cepModel = new CEPModel("01311-000");
+        CEPModel cepModel = new CEPModel("74020-200");
         CEPService cepService = new CEPService(cepModel);
         final CEPModel obtido = cepService.getCEP();
-        Assert.assertEquals(obtido.getUf(), "SP");
+        Assert.assertEquals(obtido.getCEP(), "74020-200");
+        Assert.assertEquals(obtido.getLogradouro(), "Avenida Goiás");
+        Assert.assertEquals(obtido.getComplemento(), "de 550 a 1118 - lado par");
+        Assert.assertEquals(obtido.getBairro(), "Setor Central");
+        Assert.assertEquals(obtido.getLocalidade(), "Goiânia");
+        Assert.assertEquals(obtido.getUf(), "GO");
+        Assert.assertEquals(obtido.getIbge(), "5208707");
+        Assert.assertEquals(obtido.getGia(), "");
+        Assert.assertEquals(obtido.getDdd(), "62");
+        Assert.assertEquals(obtido.getSiafi(), "9373");
+
     }
 }

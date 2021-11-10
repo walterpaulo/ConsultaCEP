@@ -8,15 +8,16 @@ public class CEPModel {
     private String bairro;
     private String localidade;
     private String uf;
-    private int ibge;
-    private int gia;
-    private int ddd;
+    private String ibge;
+    private String gia;
+    private String ddd;
+    private String siafi;
 
     public CEPModel(String CEP) {
         this.CEP = CEP;
     }
 
-    public CEPModel(String CEP, String logradouro, String complemento, String bairro, String localidade, String uf, int ibge, int gia, int ddd) {
+    public CEPModel(String CEP, String logradouro, String complemento, String bairro, String localidade, String uf, String ibge, String gia, String ddd, String siafi) {
         this.CEP = CEP;
         this.logradouro = logradouro;
         this.complemento = complemento;
@@ -26,6 +27,7 @@ public class CEPModel {
         this.ibge = ibge;
         this.gia = gia;
         this.ddd = ddd;
+        this.siafi = siafi;
     }
 
     public String getCEP() {
@@ -76,27 +78,35 @@ public class CEPModel {
         this.uf = uf;
     }
 
-    public int getIbge() {
+    public String getIbge() {
         return ibge;
     }
 
-    public void setIbge(int ibge) {
+    public void setIbge(String ibge) {
         this.ibge = ibge;
     }
 
-    public int getGia() {
+    public String getGia() {
         return gia;
     }
 
-    public void setGia(int gia) {
+    public void setGia(String gia) {
         this.gia = gia;
     }
 
-    public int getDdd() {
+    public String getDdd() {
         return ddd;
     }
 
-    public void setDdd(int ddd) {
+    public void setDdd(String ddd) {
         this.ddd = ddd;
+    }
+
+    public String getSiafi() {
+        return siafi;
+    }
+
+    public void setSiafi(String siafi) {
+        this.siafi = siafi;
     }
 }
