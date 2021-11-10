@@ -1,18 +1,24 @@
-# ConsultaCEP
+# 1 ConsultaCEP
 
-Projeto para consulta de código de endereço Posta(CEP) no Brasil.
+Projeto para consultar código de endereço Posta(CEP) no Brasil.
 
-### Objetivo
+### 1.1 Objetivo
+
+----------------------------------------------------------------------------
 Consulta CEP no DB;
 Se não tem registos, busca na ViaCEP e salva no banco.
 
-### Tecnologias
+### 1.2 Tecnologias
 
-* Java 8 +
-* Maven 4.0.0
-* JSON
-* JUnit 4.13.2
+----------------------------------------------------------------------------
+* Java 8 + [(https://www.java.com/pt-BR/download/help/java8_pt-br.html)](https://www.java.com/pt-BR/download/help/java8_pt-br.html)
+* Maven 4.0.0 [(https://maven.apache.org/pom.html)](https://maven.apache.org/pom.html)
+* JSON 
+* JUnit 4.13.2 [(https://junit.org/junit4/)](https://junit.org/junit4/)
 
-### Apoio externo
+
+### 1.3 Apoio externo
+
+----------------------------------------------------------------------------
 
 * ViaCep [https://viacep.com.br/](https://viacep.com.br/)
