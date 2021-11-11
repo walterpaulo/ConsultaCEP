@@ -34,4 +34,11 @@ public class CEPService_test {
         Assert.assertEquals(obtido.getSiafi(), "9373");
 
     }
+    @Test
+    public void getCEPNull_Test(){
+        CEPModel cepModel = new CEPModel("12344-200");
+        CEPService cepService = new CEPService(cepModel);
+        final CEPModel obtido = cepService.getCEP();
+        Assert.assertEquals(obtido.getError(), true);
+    }
 }

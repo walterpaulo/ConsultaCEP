@@ -1,5 +1,6 @@
 package br.com.unoseg.models;
 
+
 public class CEPModel {
 
     private String CEP;
@@ -12,6 +13,7 @@ public class CEPModel {
     private String gia;
     private String ddd;
     private String siafi;
+    private boolean error;
 
     public CEPModel(String CEP) {
         this.CEP = CEP;
@@ -28,6 +30,7 @@ public class CEPModel {
         this.gia = gia;
         this.ddd = ddd;
         this.siafi = siafi;
+        this.error = false;
     }
 
     public String getCEP() {
@@ -108,5 +111,13 @@ public class CEPModel {
 
     public void setSiafi(String siafi) {
         this.siafi = siafi;
+    }
+
+    public boolean getError() {
+        return error;
+    }
+
+    public void setError(Boolean error) {
+        this.error = error;
     }
 }

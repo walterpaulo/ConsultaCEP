@@ -41,16 +41,21 @@ public class APICEP {
             switch (con.getResponseCode()){
                 case 200:
                     JSONObject obj = new JSONObject(IOUtils.toString(url, Charset.forName("UTF-8")));
-                    cepModel.setUf((String) obj.get("uf"));
-                    cepModel.setComplemento((String) obj.get("complemento"));
-                    cepModel.setDdd((String) obj.get("ddd"));
-                    cepModel.setLogradouro((String) obj.get("logradouro"));
-                    cepModel.setBairro((String) obj.get("bairro"));
-                    cepModel.setLocalidade((String) obj.get("localidade"));
-                    cepModel.setIbge((String) obj.get("ibge"));
-                    cepModel.setGia((String) obj.get("gia"));
-                    cepModel.setSiafi((String) obj.get("siafi"));
-                    break;
+                    if(obj.length() == 1){
+                        cepModel.setError((Boolean) obj.get("erro"));
+                        break;
+                    }else {
+                        cepModel.setUf((String) obj.get("uf"));
+                        cepModel.setComplemento((String) obj.get("complemento"));
+                        cepModel.setDdd((String) obj.get("ddd"));
+                        cepModel.setLogradouro((String) obj.get("logradouro"));
+                        cepModel.setBairro((String) obj.get("bairro"));
+                        cepModel.setLocalidade((String) obj.get("localidade"));
+                        cepModel.setIbge((String) obj.get("ibge"));
+                        cepModel.setGia((String) obj.get("gia"));
+                        cepModel.setSiafi((String) obj.get("siafi"));
+                        break;
+                    }
             }
 
         } catch (MalformedURLException e) {
